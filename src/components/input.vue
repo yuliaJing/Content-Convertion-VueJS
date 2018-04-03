@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <textarea rows="5" cols="200" v-model="inputContent"> </textarea>
-  </div>
+  <div contenteditable="true" @input="updateInput"></div>
 </template>
 
 <script>
@@ -12,9 +10,17 @@ export default {
       inputContent: 'default input'
     }
   },
+  mounted: function () {
+    this.$el.innerText = this.inputContent
+  },
   watch: {
     inputContent: function () {
       eventBus.$emit('contentChanged', this.inputContent)
+    }
+  },
+  methods: {
+    updateInput: function () {
+      this.inputContent = this.$el.innerText
     }
   }
 }
@@ -22,8 +28,12 @@ export default {
 
 <style scoped>
   div{
-    height: 100px;
-    border: black solid;
-    margin: 5px;
+    height: 500px;
+    border: gray solid;
+    float: left;
+    margin-left: 2%;
+    width: 45%;
+    text-align: left;
+    padding: 1%;
   }
 </style>

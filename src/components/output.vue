@@ -24,8 +24,11 @@ export default {
 
 <style scoped>
   div{
-    height: 100px;
-    border: black solid;
-    margin: 5px;
+    height: 500px;
+    border: gray solid;
+    margin-left: 50%;
+    width: 45%;
+    text-align: left;
+    padding: 1%;
   }
 </style>

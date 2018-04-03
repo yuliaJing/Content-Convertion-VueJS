@@ -25,7 +25,7 @@ export default {
 
 <style scoped>
   .div {
-    height: 220px;
-    margin: 5px;
+    height: 600px;
+    border: gray solid;
   }
 </style>

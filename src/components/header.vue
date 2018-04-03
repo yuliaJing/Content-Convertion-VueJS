@@ -15,7 +15,7 @@
     text-align: left;
     max-width: 100%;
     height: 10px;
-    border: black solid;
-    margin: 5px;
+    border: gray solid;
+    margin: 20px;
   }
 </style>
