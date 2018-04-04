@@ -1,8 +1,5 @@
 <template>
-  <div contenteditable="true" @input="updateInput">
-    <p v-for="(inputLine, index) in inputContent" :key="index">
-      <span v-for="(val, key) in inputLine" :key="key"> </span>
-    </p>
+  <div contenteditable="true" @input="updateInput" id="input">
   </div>
 </template>
 

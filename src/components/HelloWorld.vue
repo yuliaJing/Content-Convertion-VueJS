@@ -10,11 +10,6 @@ import Header from './header.vue'
 import Section from './section.vue'
 export default {
   name: 'HelloWorld',
-  data () {
-    return {
-      msg: 'Welcome to Your Vue.js App'
-    }
-  },
   components: {
     'app-header': Header,
     'app-section': Section
