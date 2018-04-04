@@ -1,6 +1,6 @@
 <template>
   <div>
-    {{ outputContent }}
+    <span v-for="(val, key) in outputContent" :key="key">{{ val }} </span>
   </div>
 </template>
 
@@ -9,13 +9,20 @@ import {eventBus} from '../main'
 export default {
   data: function () {
     return {
-      outputContent: 'default output'
+      outputContent: {
+        lastName: 'Kelly',
+        firstName: 'Sue',
+        gender: 'Female',
+        dob: '7/12/1959',
+        color: 'Pink'
+      }
     }
   },
   methods: {
   },
   created: function () {
     eventBus.$on('contentChanged', (content) => {
+      alert('output.vue - changeContent')
       this.outputContent = content
     })
   }

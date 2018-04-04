@@ -1,6 +1,6 @@
 <template>
   <div>
-    header
+    Content Convertion
   </div>
 </template>
 
@@ -12,7 +12,7 @@
   div {
     border: black;
     padding: 20px;
-    text-align: left;
+    text-align: center;
     max-width: 100%;
     height: 10px;
     border: gray solid;
