@@ -27,10 +27,10 @@ export default {
 <style scoped>
   div{
     height: 500px;
-    border: gray solid;
-    margin-left: 50%;
-    width: 45%;
+    margin-left: 55%;
+    width: 40%;
     text-align: left;
     padding: 1%;
+    background-color: whitesmoke;
   }
 </style>

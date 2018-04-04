@@ -1,6 +1,6 @@
 <template>
   <div>
-    Content Convertion
+    <img src="../assets/logo.png" alt="logo" >
   </div>
 </template>
 
@@ -10,12 +10,15 @@
 
 <style scoped>
   div {
-    border: black;
-    padding: 20px;
-    text-align: center;
     max-width: 100%;
-    height: 10px;
-    border: gray solid;
     margin: 20px;
+    padding: 10px;
+    height: 100px;
+  }
+  img{
+    width: 30%;
+    margin-left: 30px;
+    object-fit: cover;
+    float: left;
   }
 </style>

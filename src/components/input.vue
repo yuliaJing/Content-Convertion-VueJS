@@ -33,7 +33,7 @@ export default {
     updateLine: function (text) {
       let newContent = {}
       let HashSet = require('hashset')
-      let splitSet = new HashSet(' ', '|', ',')
+      let splitSet = new HashSet('-', '/')
       let maleSet = new HashSet('M', 'MALE')
       let femaleSet = new HashSet('F', 'FEMALE')
 
@@ -86,11 +86,11 @@ export default {
 <style scoped>
   div{
     height: 500px;
-    border: gray solid;
     float: left;
     margin-left: 2%;
-    width: 45%;
+    width: 40%;
     text-align: left;
     padding: 1%;
+    background-color: whitesmoke;
   }
 </style>
