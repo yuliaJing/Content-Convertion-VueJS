@@ -59,18 +59,18 @@ export default {
         for (let i = 0; i < charArray.length; i++) {
           charArray[i] = splitSet.contains(charArray[i]) ? '/' : charArray[i]
         }
-        newContent.color = words[ count - 2 ]
         newContent.dob = charArray.join('')
+        newContent.color = words[ count - 2 ]
       } else if (!isNaN(isValidDate2)) {
         let charArray = words[ count - 2 ].split('')
         for (let i = 0; i < charArray.length; i++) {
           charArray[i] = splitSet.contains(charArray[i]) ? '/' : charArray[i]
         }
-        newContent.color = words[ count - 1 ]
         newContent.dob = charArray.join('')
+        newContent.color = words[ count - 1 ]
       } else {
-        newContent.color = words[ count - 2 ]
         newContent.dob = 'invalid date'
+        newContent.color = words[ count - 2 ]
       }
       this.inputContent = newContent
     }

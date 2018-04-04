@@ -22,7 +22,6 @@ export default {
   },
   created: function () {
     eventBus.$on('contentChanged', (content) => {
-      alert('output.vue - changeContent')
       this.outputContent = content
     })
   }
