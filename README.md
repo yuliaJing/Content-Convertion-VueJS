@@ -1,6 +1,6 @@
 # Content Convertion VueJS
 
-> This application provides a web interface to format baches of personal information.
+> This application provides a web interface to format batches of personal information.
 
 ## How to run the application?
 
