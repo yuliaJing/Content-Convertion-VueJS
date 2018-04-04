@@ -35,7 +35,6 @@ package-lock.json
 
 node_modules/*
 .gradle
-/build/
 *.DS_Store
 .DS_Store
 
@@ -45,7 +44,6 @@ node_modules/*
 *.iml
 *.ipr
 /out/
-build/**/*
 .gradle/**/*
 /out/
 
