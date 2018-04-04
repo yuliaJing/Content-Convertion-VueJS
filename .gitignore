@@ -45,7 +45,6 @@ node_modules/*
 *.iml
 *.ipr
 /out/
-build/**/*
 .gradle/**/*
 /out/
 
