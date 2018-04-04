@@ -1,30 +1,19 @@
-# my-project
+# Content Convertion VueJS
 
-> A Vue.js project
+> This application provides a web interface to format baches of personal information.
 
-## Build Setup
+## How to run the application?
 
+
+- First install dependencies
 ``` bash
-# install dependencies
 npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
-
-# run unit tests
-npm run unit
-
-# run e2e tests
-npm run e2e
-
-# run all tests
-npm test
 ```
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+- Then run app and you can see the web page at localhost:8080
+``` bash
+npm run dev
+```
+## How to run unit tests?
+``` bash
+npm run unit
+```

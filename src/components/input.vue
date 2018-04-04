@@ -17,6 +17,9 @@ export default {
     }
   },
   methods: {
+    /*
+    * @function: bind input data to inputContent: []
+    */
     updateInput: function () {
       this.inputContent = []
       let text = this.$el.innerText
@@ -27,10 +30,16 @@ export default {
         }
       }
     },
+
+    /*
+    * @function: add each line to inputContent: []
+    *
+    * @param: text: string
+    */
     updateLine: function (text) {
       let newContent = {}
       let HashSet = require('hashset')
-      let splitSet = new HashSet('-', '/')
+      let splitSet = new HashSet('-', '/', '.')
       let maleSet = new HashSet('M', 'MALE')
       let femaleSet = new HashSet('F', 'FEMALE')
 
@@ -39,6 +48,7 @@ export default {
       let count = words.length
       if (count < 5) {
         newContent = null
+        return
       }
       // lastName
       newContent.lastName = words[ 0 ]

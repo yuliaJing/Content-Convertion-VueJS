@@ -14,9 +14,12 @@ export default {
       outputContent: []
     }
   },
-  methods: {
-  },
   created: function () {
+    /*
+    * @function: bind inputContent: [] to outputContent: [] when loading
+    *
+    * @param: inputContent: []
+    */
     eventBus.$on('contentChanged', (content) => {
       this.outputContent = content
     })
