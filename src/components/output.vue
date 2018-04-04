@@ -1,6 +1,8 @@
 <template>
   <div>
-    <span v-for="(val, key) in outputContent" :key="key">{{ val }} </span>
+    <p v-for="(outputLine, index) in outputContent" :key="index">
+      <span v-for="(val, key) in outputLine" :key="key">{{ val }} </span>
+    </p>
   </div>
 </template>
 
@@ -9,13 +11,7 @@ import {eventBus} from '../main'
 export default {
   data: function () {
     return {
-      outputContent: {
-        lastName: 'Kelly',
-        firstName: 'Sue',
-        gender: 'Female',
-        dob: '7/12/1959',
-        color: 'Pink'
-      }
+      outputContent: []
     }
   },
   methods: {

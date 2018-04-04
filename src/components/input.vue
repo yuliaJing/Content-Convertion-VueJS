@@ -1,6 +1,8 @@
 <template>
   <div contenteditable="true" @input="updateInput">
-    <span v-for="(val, key) in inputContent" :key="key"> </span>
+    <p v-for="(inputLine, index) in inputContent" :key="index">
+      <span v-for="(val, key) in inputLine" :key="key"> </span>
+    </p>
   </div>
 </template>
 
@@ -9,13 +11,7 @@ import {eventBus} from '../main'
 export default {
   data: function () {
     return {
-      inputContent: {
-        lastName: 'Kelly',
-        firstName: 'Sue',
-        gender: 'Female',
-        dob: '7/12/1959',
-        color: 'Pink'
-      }
+      inputContent: []
     }
   },
   watch: {
@@ -25,7 +21,16 @@ export default {
   },
   methods: {
     updateInput: function () {
+      this.inputContent = []
       let text = this.$el.innerText
+      let lines = text.split('\n')
+      for (let i = 0; i < lines.length; i++) {
+        if (lines[i].length > 0) {
+          this.updateLine(lines[i])
+        }
+      }
+    },
+    updateLine: function (text) {
       let newContent = {}
       let HashSet = require('hashset')
       let splitSet = new HashSet(' ', '|', ',')
@@ -72,7 +77,7 @@ export default {
         newContent.dob = 'invalid date'
         newContent.color = words[ count - 2 ]
       }
-      this.inputContent = newContent
+      this.inputContent.push(newContent)
     }
   }
 }
