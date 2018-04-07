@@ -99,5 +99,6 @@ export default {
     text-align: left;
     padding: 1%;
     background-color: whitesmoke;
+    overflow: scroll;
   }
 </style>

@@ -18,8 +18,6 @@ export default {
   components: {
     'app-input': Input,
     'app-output': Output
-  },
-  methods: {
   }
 }
 </script>
